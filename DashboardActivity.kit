@@ -1,0 +1,20 @@
+package com.ecoguard
+
+import android.os.Bundle
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import kotlin.random.Random
+
+class DashboardActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        val wasteLevel = findViewById<TextView>(R.id.statusText)
+
+        val level = Random.nextInt(0, 100)
+
+        wasteLevel.text = "Waste Bin Level: $level%"
+    }
+}
